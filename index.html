@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaizen SUmbang Saran</title>
+    <title>Kaizen Sumbang Saran</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 20px;
-            text-align: center; /* Menambahkan ini untuk memusatkan teks */
+            text-align: center;
         }
         .logo {
-            max-width: 300px; /* Menentukan lebar maksimum logo */
-            height: auto; /* Menjaga rasio aspek gambar */
-            margin-bottom: 0px; /* Jarak antara logo dan judul */
+            max-width: 300px;
+            width: 100%; /* Agar logo fleksibel sesuai layar */
+            height: auto;
+            margin-bottom: 0px;
         }
         .menu {
             background-color: #92D050;
@@ -26,19 +27,30 @@
             border-radius: 20px;
             text-decoration: none;
             display: block;
-            width: 500px; /* Menentukan lebar menu */
-            margin-left: auto; /* Mengatur margin kiri otomatis */
-            margin-right: auto; /* Mengatur margin kanan otomatis */
-	    font-weight: bold;
+            max-width: 90%; /* Agar tombol menu tidak terlalu besar di layar kecil */
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: bold;
         }
         .menu:hover {
             background-color: #0056b3;
+        }
+
+        /* Media query untuk tampilan layar kecil */
+        @media (max-width: 600px) {
+            .menu {
+                width: 100%; /* Gunakan lebar penuh untuk tampilan lebih rapi */
+                max-width: 90%;
+                padding: 12px; /* Sedikit dikurangi agar proporsional */
+                font-size: 14px; /* Menyesuaikan ukuran teks */
+            }
         }
     </style>
 </head>
 <body>
 
-    <img src="./logo.png" alt="Logo" class="logo"> <!-- Ganti URL_LOGO dengan URL gambar logo Anda -->
+    <img src="./logo.png" alt="Logo" class="logo">
     <h1>Kaizen Sumbang Saran</h1>
     <p>Pilih salah satu menu di bawah ini:</p>
 
